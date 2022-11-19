@@ -46,7 +46,7 @@ namespace WindowsFormsApp2
             } 
             catch(Exception er)
             {
-                textBox2.Text = er.Message;
+                //textBox2.Text = er.Message; //отображение ошибки (так делать не надо, лучше в лог писать)
                 textBox1.Text = "Сервер недоступен или произошла непредвиденная ошибка";
             }
             
