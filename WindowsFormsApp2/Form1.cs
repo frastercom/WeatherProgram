@@ -41,11 +41,12 @@ namespace WindowsFormsApp2
                 Weather message = JsonSerializer.Deserialize<Weather>(s);
                 textBox1.Text = message.data.First().country_code;
                 textBox2.Text = message.data.First().datetime;
-                textBox3.Text = message.data.First().temp;
+                textBox3.Text = message.data.First().temp.ToString();
                 textBox4.Text = message.data.First().city_name;
             } 
-            catch
+            catch(Exception er)
             {
+                textBox2.Text = er.Message;
                 textBox1.Text = "Сервер недоступен или произошла непредвиденная ошибка";
             }
             
